@@ -12,14 +12,15 @@ def main():
         match option:
 
             case 1:
-                encode()
+                password = input("Please enter your password to encode: ")
+                encoded_password = encode(password)
             case 2:
-                decode()
+                decoded_password = decode(encoded_password)
+                print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}.")
             case 3:
                 break
 
-def encode(): 
-    password = input("Please enter your password to encode: ")
+def encode(password):
     new_password = ""
     for char in password:
         char = int(char)
@@ -27,7 +28,7 @@ def encode():
         new_password += char
     print("Your password has been encoded and stored!")
     return new_password
-def decode():
+def decode(encoded_password):
     pass
 
 
