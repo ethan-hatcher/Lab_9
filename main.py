@@ -20,6 +20,7 @@ def main():
             case 3:
                 break
 
+
 def encode(password):
     new_password = ""
     for char in password:
@@ -28,8 +29,15 @@ def encode(password):
         new_password += char
     print("Your password has been encoded and stored!")
     return new_password
+
+
 def decode(encoded_password):
-    pass
+    decoded_password = ""
+    for char in encoded_password:
+        char = int(char)
+        char = str(char - 3)
+        decoded_password += char
+    return decoded_password
 
 
 if __name__ == "__main__":
